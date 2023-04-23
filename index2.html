@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>საყოფაცხოვრებო ტექნიკა</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  
+    <div class="header">
+        <a href="#"><img src="cat.jpg" alt="technics" width="100" height="100"></a>
+        <details>
+          <summary>ნავიგაცია</summary>
+            <ul class="menu">
+                <li><a href="#">მობილურები</a></li>
+                <li><a href="#">ტაბები და აქსესუარები</a></li>
+                <li><a href="#">ლეპტოპები</a></li>
+                <li><a href="#">აუდიო სისტემა</a></li>
+                <li><a href="#">Gaming</a></li>
+                <li><a href="#">ტელევიზორი და მონიტორი</a></li>
+                <li><a href="#">ფოტო ვიდეო ოპტიკა</a></li>
+                <li><a href="#">ჭკვიანი სახლი</a></li>
+            </ul>
+          </details>
+          <form name="search">
+            <input type="text" name="key"></input>
+            <input type="submit" name="send" value="ავტორიზაცია"></input>
+        </form>
+      </div>
+      
+      <div class="row">
+        <div class="column" style="background-color:#aaa;">Slider</div>
+        <div class="column" style="background-color:#bbb;">Hot sales</div>
+        <div class="column" style="background-color:#ccc;">Top</div>
+        <div class="column" style="background-color:#ddd;">viewed production</div>
+      </div>
+      
+      <div class="footer">
+        <ul>
+          <li><a href="#">FB</a></li>
+          <li><a href="#">Address</a></li>
+          <li><a href="#">phone number</a></li>
+          <li><a href="#">email</a></li>
+          <li><a href="#">Branches</a></li>
+          <li><a href="#">navigation</a></li>
+          <li><a href="#">Payments</a></li>
+          <li><a href="#">my account</a></li>
+          <li><a href="index.html">About me</a></li>
+      </ul>
+      </div>
+    <script>
+      alert('მოგესალმებით ჩვენ საიტზე');
+    alert('შეგახსენებთ, რომ ჩვენი საიტი იყენებს cookies პოლიტიკას');
+
+    let date = new Date();
+    let time = date.getHours();
+    document.write(date);
+    document.write(time);
+        function sendForm(e){
+            //ვიღებთ keyველის მნიშვნელობას
+            let keyBox=document.search.key;
+            let val=keyBox.value;
+            if(val.length>5){
+            alert("username სიგრძე არ არის დასაშვები");
+            e.preventDefault();
+        }
+        else
+        alert("შესვლა ნებადართულია");
+    }
+    let sendButton=document.search.send;
+    sendButton.addEventListener("click",sendForm);
+    </script>
+</body>
+</html>
